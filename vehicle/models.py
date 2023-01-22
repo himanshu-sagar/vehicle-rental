@@ -14,4 +14,4 @@ class Vehicle(models.Model):
     station = models.ForeignKey(Station, on_delete=models.CASCADE, to_field="station_id")
 
     def __str__(self):
-        return self.make + ' ' + self.model
+        return self.company + ' ' + self.model

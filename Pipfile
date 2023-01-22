@@ -11,6 +11,10 @@ pyjwt = "*"
 psycopg2-binary = "*"
 django-redis = "*"
 requests = "*"
+qrcode = "*"
+pyzbar = "*"
+opencv-python = "*"
+pillow = "*"
 
 [dev-packages]
 

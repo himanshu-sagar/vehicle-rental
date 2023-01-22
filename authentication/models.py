@@ -15,16 +15,10 @@ class User(AbstractUser):
         message="Phone number must be entered in the format: '+999999999'. Up to 15 digits allowed."
     )
     phone = models.CharField(max_length=15, primary_key=True, validators=[phone_regex])
-    is_store_manager = models.BooleanField(default=False, auto_created=True)
-    is_customer = models.BooleanField(default=False, auto_created=True)
+    is_admin = models.BooleanField(default=False, auto_created=True)
+
     USERNAME_FIELD = 'phone'
     REQUIRED_FIELDS = ['username', 'first_name', 'last_name']
 
     def __str__(self):
         return "{}".format(self.phone)
-
-    def is_store_manager(self):
-        return self.is_store_manager
-
-    def is_customer(self):
-        return self.is_customer

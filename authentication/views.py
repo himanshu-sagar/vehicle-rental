@@ -93,7 +93,7 @@ class VerifyPhoneOtpView(APIView):
             if serializer.is_valid():
                 user = serializer.save()  # If data is valid, user will be created successfully
                 cache.delete(key=phone)  # Remove users data from cache
-                return Response({'data': user.data}, status=status.HTTP_201_CREATED)
+                return Response({'data': serializer.data}, status=status.HTTP_201_CREATED)
             else:
                 return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
         return Response(data={"error": "OTP Invalid !!!, please enter correct OTP"}, status=status.HTTP_400_BAD_REQUEST)

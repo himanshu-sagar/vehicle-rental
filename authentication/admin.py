@@ -25,8 +25,8 @@ class UserAdmin(BaseUserAdmin):
         }),
     )
 
-    list_display = ['id', 'phone', 'first_name', 'last_name', 'is_staff', 'username', 'is_customer', 'is_store_manager']
-    search_fields = ('id', 'phone', 'first_name', 'last_name', "username", 'is_customer', 'is_store_manager')
+    list_display = ['id', 'phone', 'first_name', 'last_name', 'is_staff', 'username', 'is_admin']
+    search_fields = ('id', 'phone', 'first_name', 'last_name', "username", 'is_admin')
 
 
 admin.site.register(User, UserAdmin)

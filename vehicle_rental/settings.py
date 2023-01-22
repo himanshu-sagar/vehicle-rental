@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'authentication',
     'rest_framework_simplejwt',
     'vehicle',
-    'station'
+    'station',
+    'booking'
 ]
 
 MIDDLEWARE = [
